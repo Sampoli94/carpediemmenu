@@ -70,6 +70,7 @@ const MENU = [
       { name: { it: "Acqua 1.5L (Naturale/Frizzante)", en: "Water 1.5L (Still/Sparkling)" }, price: "€ 1,50" },
       { name: { it: "Coca-Cola / Fanta / Sprite (Lattina)", en: "Coca-Cola / Fanta / Sprite (Can)" }, price: "€ 2,00" },
       { name: { it: "Succhi di frutta", en: "Fruit juices" }, price: "€ 2,00" },
+      { name: { it: "Latte Di Mandorla", en: "Almond Milk" }, price: "€ 2,00" },
       { name: { it: "Schweppes (Limone/Tonica)", en: "Schweppes (Lemon/Tonic)" }, price: "€ 2,00" },
       { name: { it: "Acqua Tonica Mediterranea", en: "Mediterranean Tonic Water" }, price: "€ 2,50" },
       { name: { it: "Red Bull", en: "Red Bull" }, price: "€ 2,50" },
