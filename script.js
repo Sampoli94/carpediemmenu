@@ -23,7 +23,7 @@ const CAFE = {
     ssid: "ADB-DB9D56",
     password: "d42pfbws9qrm573a",
   },
-  qrTargetUrl: "https://menucarpediem.netlify.app/#menu",
+  qrTargetUrl: "sampoli94.github.io/Carpe-diem-menu",
 };
 
 /* ========================================
