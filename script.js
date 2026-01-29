@@ -19,7 +19,7 @@ const CAFE = {
   instagramHandle: "@ilcarpediem06",
   wifi: {
     ssid: "ADB-DB9D56",
-    password: "password123",
+    password: "d42pfbws9qrm573a",
   },
   qrTargetUrl: "https://menucarpediem.netlify.app/#menu",
 };
