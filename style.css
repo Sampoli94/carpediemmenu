@@ -121,6 +121,51 @@ body {
   color: var(--bordeaux);
 }
 
+/* Dropdown Menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--bordeaux-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 200;
+  padding: 8px 0;
+}
+
+.nav-dropdown:hover .nav-dropdown-content,
+.nav-dropdown-content.show {
+  display: block;
+}
+
+.nav-dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.nav-dropdown-content a:hover {
+  background: var(--bordeaux-light);
+  color: var(--bordeaux);
+}
+
 .lang-switch {
   display: flex;
   border: 1px solid var(--bordeaux-border);
@@ -285,6 +330,33 @@ body {
 /* ========================================
    CONTATTI
    ======================================== */
+/* Due bottoni telefono affiancati */
+.contacts-phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-btn--square {
+  aspect-ratio: 1;
+  max-width: 180px;
+  justify-self: center;
+}
+
+@media (max-width: 500px) {
+  .contacts-phones {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .contact-btn--square {
+    max-width: 100%;
+    aspect-ratio: auto;
+    padding: 20px 16px;
+  }
+}
+
 .contacts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

@@ -17,7 +17,12 @@
         <p class="tagline">Life Begins After Coffee</p>
       </div>
       <nav class="nav">
-        <a href="#menu" class="nav-link" data-i18n="nav.menu">Menù</a>
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn" data-i18n="nav.menu">Menù ▾</button>
+          <div class="nav-dropdown-content" id="menuDropdown">
+            <!-- Popolato da JavaScript -->
+          </div>
+        </div>
         <a href="#info" class="nav-link" data-i18n="nav.info">Info</a>
         <a href="#contatti" class="nav-link" data-i18n="nav.contacts">Contatti</a>
         <div class="lang-switch">
@@ -65,12 +70,19 @@
       <div class="section-header">
         <h2 class="section-title" data-i18n="contacts.title">CONTATTI</h2>
       </div>
-      <div class="contacts-grid">
-        <a id="phoneLink" href="#" class="contact-btn contact-btn--call">
+      <div class="contacts-phones">
+        <a id="phoneLink" href="#" class="contact-btn contact-btn--call contact-btn--square">
           <span class="contact-icon">📞</span>
-          <span data-i18n="contacts.call">Chiama</span>
+          <span data-i18n="contacts.mobile">Cellulare</span>
           <span class="contact-detail" id="phoneText"></span>
         </a>
+        <a id="phoneLink2" href="tel:0966420138" class="contact-btn contact-btn--call contact-btn--square">
+          <span class="contact-icon">📞</span>
+          <span data-i18n="contacts.landline">Fisso</span>
+          <span class="contact-detail">0966 420138</span>
+        </a>
+      </div>
+      <div class="contacts-grid">
         <a id="instagramLink" href="#" target="_blank" rel="noopener" class="contact-btn contact-btn--instagram">
           <span class="contact-icon">📷</span>
           <span>Instagram</span>

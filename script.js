@@ -13,13 +13,15 @@ const CAFE = {
   name: "Carpe Diem",
   phone: "347 814 0258",
   phoneTel: "+393478140258",
-  address: "Via S. Pugliese 54, Gioia Tauro",
+  phone2: "0966 420138",
+  phoneTel2: "+390966420138",
+  address: "Gioia Tauro, Via S. Pugliese 54",
   mapsQuery: "Via S. Pugliese 54, Gioia Tauro",
   instagramUrl: "https://www.instagram.com/ilcarpediem06/",
   instagramHandle: "@ilcarpediem06",
   wifi: {
     ssid: "ADB-DB9D56",
-    password: "d42pfbws9qrm573a",
+    password: "password123",
   },
   qrTargetUrl: "https://menucarpediem.netlify.app/#menu",
 };
@@ -161,7 +163,7 @@ const MENU_FOOTNOTE = {
 
 const I18N = {
   it: {
-    "nav.menu": "Menù",
+    "nav.menu": "Menù ▾",
     "nav.info": "Info",
     "nav.contacts": "Contatti",
     "menu.title": "MENÙ",
@@ -171,12 +173,14 @@ const I18N = {
     "info.network": "Rete:",
     "contacts.title": "CONTATTI",
     "contacts.call": "Chiama",
+    "contacts.mobile": "Cellulare",
+    "contacts.landline": "Fisso",
     "contacts.directions": "Indicazioni",
     "contacts.openMaps": "Apri Google Maps",
     "admin.download": "Scarica QR (PNG)",
   },
   en: {
-    "nav.menu": "Menu",
+    "nav.menu": "Menu ▾",
     "nav.info": "Info",
     "nav.contacts": "Contacts",
     "menu.title": "MENU",
@@ -186,6 +190,8 @@ const I18N = {
     "info.network": "Network:",
     "contacts.title": "CONTACTS",
     "contacts.call": "Call",
+    "contacts.mobile": "Mobile",
+    "contacts.landline": "Landline",
     "contacts.directions": "Directions",
     "contacts.openMaps": "Open Google Maps",
     "admin.download": "Download QR (PNG)",
@@ -277,6 +283,28 @@ function setupLinks() {
   if (wifiPass) wifiPass.textContent = CAFE.wifi.password;
 }
 
+function setupMenuDropdown() {
+  const dropdown = document.getElementById("menuDropdown");
+  if (!dropdown) return;
+
+  dropdown.innerHTML = "";
+  
+  // Link "Tutto il menu"
+  const allLink = document.createElement("a");
+  allLink.href = "#menu";
+  allLink.textContent = getLang() === "en" ? "Full menu" : "Tutto il menù";
+  dropdown.appendChild(allLink);
+
+  // Link per ogni categoria
+  for (let i = 0; i < MENU.length; i++) {
+    const cat = MENU[i];
+    const link = document.createElement("a");
+    link.href = `#cat-${i}`;
+    link.textContent = localize(cat.title);
+    dropdown.appendChild(link);
+  }
+}
+
 function renderMenu() {
   const container = document.getElementById("menuContainer");
   if (!container) return;
@@ -284,9 +312,11 @@ function renderMenu() {
   container.innerHTML = "";
   const lang = getLang();
 
-  for (const category of MENU) {
+  for (let i = 0; i < MENU.length; i++) {
+    const category = MENU[i];
     const section = document.createElement("div");
     section.className = "menu-category";
+    section.id = `cat-${i}`;
 
     const title = document.createElement("h3");
     title.className = "menu-category-title";
@@ -400,6 +430,7 @@ function applyAll() {
   applyI18n();
   updateLangButtons();
   renderMenu();
+  setupMenuDropdown();
 }
 
 /* ========================================
