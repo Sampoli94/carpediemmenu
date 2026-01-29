@@ -11,7 +11,7 @@
 
 const CAFE = {
   name: "Carpe Diem",
-  phone: "347 814 0258",
+  phone: "347 814 0258""0966420138",
   phoneTel: "+393478140258",
   address: "Via S. Pugliese 54, Gioia Tauro",
   mapsQuery: "Via S. Pugliese 54, Gioia Tauro",
