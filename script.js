@@ -285,6 +285,7 @@ function setupLinks() {
 
 function setupMenuDropdown() {
   const dropdown = document.getElementById("menuDropdown");
+  const dropdownBtn = document.querySelector(".nav-dropdown-btn");
   if (!dropdown) return;
 
   dropdown.innerHTML = "";
@@ -303,6 +304,28 @@ function setupMenuDropdown() {
     link.textContent = localize(cat.title);
     dropdown.appendChild(link);
   }
+
+  // Chiudi dropdown quando clicchi su un link
+  dropdown.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("show");
+    });
+  });
+
+  // Apri/chiudi dropdown con click sul bottone
+  if (dropdownBtn) {
+    dropdownBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle("show");
+    });
+  }
+
+  // Chiudi dropdown se clicchi fuori
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-dropdown")) {
+      dropdown.classList.remove("show");
+    }
+  });
 }
 
 function renderMenu() {
