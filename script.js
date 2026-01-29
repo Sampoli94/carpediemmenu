@@ -16,7 +16,7 @@ const CAFE = {
   phone2: "0966 420138",
   phoneTel2: "+390966420138",
   address: "Gioia Tauro, Via S. Pugliese 54",
-  mapsQuery: "Via S. Pugliese 54, Gioia Tauro",
+  mapsQuery: "Gioia Tauro,Via S. Pugliese 54",
   instagramUrl: "https://www.instagram.com/ilcarpediem06/",
   instagramHandle: "@ilcarpediem06",
   wifi: {
