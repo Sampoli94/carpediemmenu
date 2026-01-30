@@ -21,6 +21,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Offset per lo scroll alle sezioni (compensa l'header sticky) */
+.menu-category,
+.section,
+#menu,
+#info,
+#contatti {
+  scroll-margin-top: 100px;
 }
 
 /* SFONDO FISSO (funziona anche su mobile) */
