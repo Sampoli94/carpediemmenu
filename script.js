@@ -103,6 +103,17 @@ const MENU = [
     ], 
   }, 
   { 
+    title: { it: "Aperitivi", en: "Aperitifs" }, 
+    items: [ 
+      { name: { it: "Aperitivo Analcolico", en: "Non-Alcoholic Aperitif" }, price: "€ 2,50" }, 
+      { name: { it: "Aperitivo Alcolico", en: "Alcoholic Aperitif" }, price: "€ 4,00" },
+      { name: { it: "Cocktail", en: "Cocktail" }, price: "€ 6,00" }, 
+      { name: { it: "Prosecco", en: "Prosecco" }, price: "€ 4,00" }, 
+      { name: { it: "Gin Tonic/Lemon", en: "Gin Tonic/Lemon" }, price: "€ 10,00" }, 
+      { name: { it: "Assagini Della Casa", en: "Tastings of the House" }, price: "€ 6,00" }, 
+    ], 
+  },
+  { 
     title: { it: "Insalate", en: "Salads" }, 
     items: [ 
       { name: { it: "Verde (Lattuga)", en: "Green (Lettuce)" }, price: "€ 2,00" }, 
@@ -111,7 +122,7 @@ const MENU = [
       { name: { it: "Marinara (Lattuga, Pomodoro, Mais, Tonno)", en: "Marinara (Lettuce, Tomato, Corn, Tuna)" }, price: "€ 4,70" }, 
       { name: { it: "Top (Lattuga, Pomodoro, Mais, Tonno, Mozzarella)", en: "Top (Lettuce, Tomato, Corn, Tuna, Mozzarella)" }, price: "€ 5,50" }, 
     ], 
-  }, 
+  },
   { 
     title: { it: "Piadine", en: "Wraps" }, 
     items: [ 
