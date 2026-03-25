@@ -63,6 +63,7 @@ const MENU = [
       { name: { it: "Occhio di bue piccolo (Nutella/Marmellata/Pistacchio/Cioccolato bianco)", en: "Jam tart small (Nutella/Jam/Pistachio/White chocolate)" }, price: "€ 0,60" }, 
       { name: { it: "Pasticciotto grande crema pasticcera", en: "Custard pastry large" }, price: "€ 1,80" }, 
       { name: { it: "Pasticciotto piccolo (Crema limone/Cioccolato fondente e arancia)", en: "Custard pastry small (Lemon/Dark chocolate & orange)" }, price: "€ 1,30" }, 
+      { name: { it: "Muffin", en: "Muffin" }, price: "€ 1,50" },
     ], 
   }, 
   { 
