@@ -1,7 +1,22 @@
+/* Stile del menu digitale. I colori sono nelle variabili di :root.
+   
+   Indice delle sezioni:
+     1. Colori, base e sfondo
+     2. Barra in alto
+     3. Menu a tendina
+     4. Contenuto principale e titoli
+     5. Righe del menu
+     6. Informazioni
+     7. Contatti
+     8. Piè di pagina
+     9. Area QR
+     10. Schermi piccoli */
+
 /* ========================================
    CARPE DIEM - STILI
    ======================================== */
 
+/* Sezione 1 - Colori, base e sfondo */
 :root {
   --bordeaux: #7a0f2b;
   --bordeaux-light: rgba(122, 15, 43, 0.08);
@@ -68,6 +83,7 @@ body {
 /* ========================================
    HEADER
    ======================================== */
+/* Sezione 2 - Barra in alto */
 .header {
   background: var(--white);
   border-bottom: 1px solid var(--bordeaux-border);
@@ -131,6 +147,7 @@ body {
   color: var(--bordeaux);
 }
 
+/* Sezione 3 - Menu a tendina */
 /* Dropdown Menu */
 .nav-dropdown {
   position: relative;
@@ -202,6 +219,7 @@ body {
 /* ========================================
    MAIN
    ======================================== */
+/* Sezione 4 - Contenuto principale e titoli */
 .main {
   max-width: 900px;
   margin: 0 auto;
@@ -230,6 +248,7 @@ body {
 /* ========================================
    MENU
    ======================================== */
+/* Sezione 5 - Righe del menu */
 .menu-category {
   margin-bottom: 30px;
 }
@@ -306,6 +325,7 @@ body {
 /* ========================================
    INFO
    ======================================== */
+/* Sezione 6 - Informazioni */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -340,6 +360,7 @@ body {
    CONTATTI
    ======================================== */
 /* Due bottoni telefono affiancati */
+/* Sezione 7 - Contatti */
 .contacts-phones {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -423,6 +444,7 @@ body {
 /* ========================================
    FOOTER
    ======================================== */
+/* Sezione 8 - Piè di pagina */
 .footer {
   background: var(--bordeaux);
   color: var(--white);
@@ -443,6 +465,7 @@ body {
 /* ========================================
    ADMIN QR (nascosto di default)
    ======================================== */
+/* Sezione 9 - Area QR */
 .qr-admin {
   background: var(--white);
   padding: 30px;
@@ -508,6 +531,7 @@ body {
 /* ========================================
    RESPONSIVE
    ======================================== */
+/* Sezione 10 - Schermi piccoli */
 @media (max-width: 600px) {
   .header-inner {
     flex-direction: column;

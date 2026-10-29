@@ -1,3 +1,12 @@
+// Indice delle sezioni:
+//   1. Dati del locale
+//   2. Menu (prodotti e prezzi)
+//   3. Note del menu e traduzioni
+//   4. Lingua e testi
+//   5. Collegamenti e menu a tendina
+//   6. Disegno del menu
+//   7. Area QR e avvio
+
 /* ======================================== 
  CARPE DIEM - CONFIGURAZIONE 
  ======================================== 
@@ -9,6 +18,8 @@
  
  ======================================== */ 
  
+// Sezione 1 - Dati del locale
+// qrTargetUrl è l'indirizzo dentro il QR stampato: non cambiarlo.
 const CAFE = { 
   name: "Carpe Diem", 
   phone: "347 814 0258", 
@@ -32,6 +43,7 @@ const CAFE = {
  Ogni item: { name: { it, en }, price } 
  ======================================== */ 
  
+// Sezione 2 - Menu (prodotti e prezzi)
 const MENU = [ 
   { 
     title: { it: "Caffetteria", en: "Coffee" }, 
@@ -175,6 +187,7 @@ const MENU = [
   }, 
 ]; 
  
+// Sezione 3 - Note del menu e traduzioni
 const MENU_FOOTNOTE = { 
   it: "*PRODOTTO SURGELATO", 
   en: "*FROZEN PRODUCT", 
@@ -225,6 +238,7 @@ const I18N = {
  FUNZIONI 
  ======================================== */ 
 
+// Sezione 4 - Lingua e testi
 let dropdownInitialized = false;
  
 function getLang() { 
@@ -285,6 +299,7 @@ function setupLangButtons() {
   document.getElementById("langEn")?.addEventListener("click", () => setLang("en")); 
 } 
  
+// Sezione 5 - Collegamenti e menu a tendina
 function setupLinks() { 
   const phoneLink = document.getElementById("phoneLink"); 
   if (phoneLink) phoneLink.href = `tel:${CAFE.phoneTel}`; 
@@ -357,6 +372,7 @@ function setupMenuDropdown() {
   }
 } 
  
+// Sezione 6 - Disegno del menu
 function renderMenu() { 
   const container = document.getElementById("menuContainer"); 
   if (!container) return; 
@@ -430,6 +446,7 @@ function renderMenu() {
   container.appendChild(footnote); 
 } 
  
+// Sezione 7 - Area QR e avvio
 function setupAdmin() { 
   const adminSection = document.getElementById("qrAdmin"); 
   if (!adminSection) return; 
