@@ -462,6 +462,9 @@ body {
   margin: 4px 0;
 }
 
+.footer .footer-firma { margin-top: 12px; font-size: 11px; opacity: 0.75; }
+.footer .footer-firma a { text-decoration: none; }
+
 /* ========================================
    ADMIN QR (nascosto di default)
    ======================================== */
