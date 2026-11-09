@@ -322,6 +322,17 @@ body {
   font-size: 13px;
 }
 
+/* Avviso allergeni sotto il menu: testo in script.js (MENU_ALLERGENS) */
+.menu-allergens {
+  margin-top: 10px;
+  background: var(--white);
+  padding: 12px 16px;
+  border: 1px solid var(--bordeaux);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 /* ========================================
    INFO
    ======================================== */
