@@ -193,6 +193,13 @@ const MENU_FOOTNOTE = {
   it: "*PRODOTTO SURGELATO", 
   en: "*FROZEN PRODUCT", 
 }; 
+
+// Avviso allergeni obbligatorio per legge (Reg. UE 1169/2011): resta sempre
+// in fondo al menu. Si puo' riformulare, ma non va tolto.
+const MENU_ALLERGENS = { 
+  it: "ALLERGENI: i nostri prodotti possono contenere allergeni come glutine, latte, uova, frutta a guscio, soia e sesamo (Reg. UE 1169/2011). Per informazioni su allergeni e intolleranze chiedi al personale.", 
+  en: "ALLERGENS: our products may contain allergens such as gluten, milk, eggs, nuts, soy and sesame (EU Reg. 1169/2011). For information on allergens and intolerances please ask our staff.", 
+}; 
  
 /* ======================================== 
  TRADUZIONI INTERFACCIA 
@@ -215,6 +222,7 @@ const I18N = {
     "contacts.directions": "Indicazioni", 
     "contacts.openMaps": "Apri Google Maps", 
     "admin.download": "Scarica QR (PNG)", 
+    "footer.privacy": "Privacy e cookie", 
   }, 
   en: { 
     "nav.menu": "Menu ▾", 
@@ -232,6 +240,7 @@ const I18N = {
     "contacts.directions": "Directions", 
     "contacts.openMaps": "Open Google Maps", 
     "admin.download": "Download QR (PNG)", 
+    "footer.privacy": "Privacy and cookies", 
   }, 
 }; 
  
@@ -445,6 +454,12 @@ function renderMenu() {
   footnote.className = "menu-footnote"; 
   footnote.textContent = MENU_FOOTNOTE[lang] || MENU_FOOTNOTE.it; 
   container.appendChild(footnote); 
+
+  // Avviso allergeni 
+  const allergens = document.createElement("div"); 
+  allergens.className = "menu-allergens"; 
+  allergens.textContent = MENU_ALLERGENS[lang] || MENU_ALLERGENS.it; 
+  container.appendChild(allergens); 
 } 
  
 // Sezione 7 - Area QR e avvio
